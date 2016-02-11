@@ -1,4 +1,4 @@
-Views["dashboard.chart"] = function(){
+Views["statistics.logger"] = function(){
 
 	var tasks = {
 		gravity: 3,

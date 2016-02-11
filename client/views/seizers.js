@@ -1,5 +1,5 @@
-Views.books = function(){
-	var proxy = webix.proxy("meteor", Books);
+Views.seizers = function(){
+	var proxy = webix.proxy("meteor", Seizers);
 
 	//datatable
 	var table = {
@@ -7,9 +7,13 @@ Views.books = function(){
 		id:"dtable", select:true, multiselect:true,
 		editable:true, editaction:"dblclick",
 		columns:[{
-			id:"name", editor:"text", fillspace:1
+			id:"createdAt", editor:"text", fillspace:1
 		},{
-			id:"author", editor:"text", fillspace:1
+			id:"duration", editor:"text", fillspace:1
+		},{
+			id:"context", editor:"text", fillspace:1
+		},{
+			id:"comment", editor:"text", fillspace:1
 		}],
 		url: 	proxy,
 		save:   proxy
