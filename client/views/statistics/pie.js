@@ -1,4 +1,4 @@
-Views["statistics.logger"] = function(){
+Views["statistics.pie"] = function(){
 
 	var tasks = {
 		gravity: 3,

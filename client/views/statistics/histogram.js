@@ -1,4 +1,4 @@
-Views["statistics.last"] = function(){
+Views["statistics.histogram"] = function(){
 
 	var tasks = {
 		view:"chart",

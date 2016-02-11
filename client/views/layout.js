@@ -8,16 +8,16 @@ Views.app = function(){
 		width:180, layout:"y", select:true,
 		template:"<span class='webix_icon fa-#icon#'></span> #value# ",
 		data:[
-			{ value:"Dashboard", 		id:"dashboard",
-				href:"/app/dashboard", 	icon:"envelope-o" },
-			{ value:"Books", 			id:"books",
-				href:"/app/books", 		icon:"briefcase" },
-			{ value:"Templates",		id:"templates",
-				href:"/app/templates", 	icon:"cog" }
+			{ value:"Statistics", 		id:"statistics",
+				href:"/app/statistics", 	icon:"envelope-o" },
+			{ value:"Seizers", 			id:"seizers",
+				href:"/app/seizers", 		icon:"briefcase" },
+			{ value:"Logger",		id:"logger",
+				href:"/app/logger", 	icon:"cog" }
 		]
 	};
 
-	var ui = {
+	var ui_ = {
 		type:"line", cols:[
 			{ type:"clean", css:"app-left-panel",
 				padding:10, margin:20, borderless:true, rows: [ header, menu ]},
@@ -26,6 +26,24 @@ Views.app = function(){
 					{ $subview:true } 
 				]}
 			]}
+		]
+	};
+
+	var ui = {
+		view: "tabview",
+		cells: [
+			{
+				header: "Logger",
+				body: Views.logger()
+			},
+			{
+				header: "Data",
+				body: {}
+			},
+			{
+				header: "Admin",
+				body: {}
+			}
 		]
 	};
 

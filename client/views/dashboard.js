@@ -1,13 +1,13 @@
-Views.dashboard = function(){
+Views.statistics = function(){
 
-	var chart = Views["dashboard.chart"]();
-	var tasks = Views["dashboard.tasks"]();
+	var pie = Views["statistics.pie"]();
+	var histogram = Views["statistics.histogram"]();
 
 	return {
 		$ui: {
 			type:"space", rows:[
-				chart,
-				tasks
+				pie,
+				histogram
 			]
 		}
 	};
